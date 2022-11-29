@@ -685,3 +685,219 @@ body {
         }
     }
 }
+
+.incident-section {
+    display: flex;
+    .right-imaged {
+        padding-block: var(--common-padding-block);
+        @media(max-width: 904px) {
+            padding-block: 50px;
+        }
+        @media(max-width: 632px) {
+            padding-block: 25px;
+        }
+        margin-inline: var(--body-margins);
+        flex-basis: var(--body-basis);
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(var(--body-columns), 1fr);
+        @media(max-width: 632px) {
+            display: flex;
+            flex-direction: column;
+        }
+        gap: var(--body-gutters);
+        @media(max-width: 1240px) {
+            margin: auto;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        @media(max-width: 904px) {
+            margin-inline: 32px;
+        }
+        @media(max-width: 664px) {
+            margin-inline: 16px;
+        }
+        .image {
+            background-image: url(assets/alien-isolation-pc-games.webp);
+            grid-column-start: -1;
+            grid-column-end: 8;
+            background-position-y: center;
+            background-position-x: center;
+            background-size: cover;
+            border-radius: 16px;
+            @media(max-width: 632px) {
+                height: 200px;
+            }
+        }
+        .text {
+            grid-column-start: 1;
+            grid-column-end: 7;
+            @media(max-width: 1240px) {
+                grid-column-end: 8;
+            }
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            h5 {
+                margin-block: 0;
+                color: var(--primary);
+                @include headline-medium();
+                @media(max-width: 904px) {
+                    @include headline-small();
+                }
+            }
+            p {
+                margin-block: 0;
+                color: var(--on-surface);
+                @include body-large();
+                @media(max-width: 904px) {
+                    @include body-medium();
+                }
+            }
+        }
+    }
+}
+
+.clone-section {
+    display: flex;
+    .right-imaged {
+        padding-block: var(--common-padding-block);
+        @media(max-width: 904px) {
+            padding-block: 50px;
+        }
+        @media(max-width: 632px) {
+            padding-block: 25px;
+        }
+        margin-inline: var(--body-margins);
+        flex-basis: var(--body-basis);
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(var(--body-columns), 1fr);
+        @media(max-width: 632px) {
+            display: flex;
+            flex-direction: column;
+        }
+        gap: var(--body-gutters);
+        @media(max-width: 1240px) {
+            margin: auto;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        @media(max-width: 904px) {
+            margin-inline: 32px;
+        }
+        @media(max-width: 664px) {
+            margin-inline: 16px;
+        }
+        .image {
+            background-image: url(assets/alien-isolation-pc-games.webp);
+            grid-column-start: -1;
+            grid-column-end: 8;
+            background-position-y: center;
+            background-position-x: center;
+            background-size: cover;
+            border-radius: 16px;
+            @media(max-width: 632px) {
+                height: 200px;
+            }
+        }
+        .text {
+            grid-column-start: 1;
+            grid-column-end: 7;
+            @media(max-width: 1240px) {
+                grid-column-end: 8;
+            }
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            h5 {
+                margin-block: 0;
+                color: var(--primary);
+                @include headline-medium();
+                @media(max-width: 904px) {
+                    @include headline-small();
+                }
+            }
+            p {
+                margin-block: 0;
+                color: var(--on-surface);
+                @include body-large();
+                @media(max-width: 904px) {
+                    @include body-medium();
+                }
+            }
+        }
+    }
+}
+
+.help-section {
+    display: flex;
+    .right-imaged {
+        padding-block: var(--common-padding-block);
+        @media(max-width: 904px) {
+            padding-block: 50px;
+        }
+        @media(max-width: 632px) {
+            padding-block: 25px;
+        }
+        margin-inline: var(--body-margins);
+        flex-basis: var(--body-basis);
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: repeat(var(--body-columns), 1fr);
+        @media(max-width: 632px) {
+            display: flex;
+            flex-direction: column;
+        }
+        gap: var(--body-gutters);
+        @media(max-width: 1240px) {
+            margin: auto;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        @media(max-width: 904px) {
+            margin-inline: 32px;
+        }
+        @media(max-width: 664px) {
+            margin-inline: 16px;
+        }
+        .image {
+            background-image: url(assets/blevotina.webp);
+            grid-column-start: -1;
+            grid-column-end: 8;
+            background-position-y: center;
+            background-position-x: center;
+            background-size: cover;
+            border-radius: 16px;
+            @media(max-width: 632px) {
+                height: 200px;
+            }
+        }
+        .text {
+            grid-column-start: 1;
+            grid-column-end: 7;
+            @media(max-width: 1240px) {
+                grid-column-end: 8;
+            }
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            h5 {
+                margin-block: 0;
+                color: var(--primary);
+                @include headline-medium();
+                @media(max-width: 904px) {
+                    @include headline-small();
+                }
+            }
+            p {
+                margin-block: 0;
+                color: var(--on-surface);
+                @include body-large();
+                @media(max-width: 904px) {
+                    @include body-medium();
+                }
+            }
+        }
+    }
+}
