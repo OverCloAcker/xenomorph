@@ -14,6 +14,9 @@
 
     --on-surface-light: #1C1B1F;
 
+    --inverse-surface-light: #313033;
+    --on-inverse-surface-light: #F4EFF4;
+
     --primary-dark: #D0BCFF;
     --on-primary-dark: #381E72;
 
@@ -21,17 +24,24 @@
 
     --on-surface-dark: #E6E1E5;
 
+    --inverse-surface-dark: #E6E1E5;
+    --on-inverse-surface-dark: #313033;
+
     @media(prefers-color-scheme: light) {
         --primary: var(--primary-light);
         --on-primary: var(--on-primary-light);
         --background: var(--backgrond-light);
         --on-surface: var(--on-surface-light);
+        --inverse-surface: var(--inverse-surface-light);
+        --on-inverse-surface: var(--on-inverse-surface-light);
     }
     @media(prefers-color-scheme: dark) {
         --primary: var(--primary-dark);
         --on-primary: var(--on-primary-dark);
         --background: var(--backgrond-dark);
         --on-surface: var(--on-surface-dark);
+        --inverse-surface: var(--inverse-surface-dark);
+        --on-inverse-surface: var(--on-inverse-surface-dark);
     }
 }
 
@@ -40,6 +50,15 @@
     font-style: Regular;
     font-weight: 400px;
     font-size: 22px;
+    letter-spacing: 0;
+    line-height: 28px;
+}
+
+@mixin title-large-custom {
+    font-family: Roboto;
+    font-style: Regular;
+    font-weight: 400px;
+    font-size: 20px;
     letter-spacing: 0;
     line-height: 28px;
 }
@@ -613,6 +632,56 @@ body {
                     @include body-medium();
                 }
             }
+        }
+    }
+}
+
+.adv-section {
+    display: flex;
+    background-color: var(--inverse-surface);
+    .adv-section-content {
+        margin-inline: var(--body-margins);
+        flex-basis: var(--body-basis);
+        flex-grow: 1;
+        @media(max-width: 632px) {
+            display: flex;
+            flex-direction: column;
+        }
+        @media(max-width: 1240px) {
+            margin: auto;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        @media(max-width: 904px) {
+            margin-inline: 32px;
+        }
+        @media(max-width: 664px) {
+            margin-inline: 16px;
+        }
+        display: flex;
+        place-content: center;
+        place-items: center;
+        align-items: center;
+        align-content: center;
+        padding-block: 74px;
+        @media(max-width: 904px) {
+            padding-block: 37px;
+        }
+        @media(max-width: 632px) {
+            padding-block: 19px;
+        }
+        h2 {
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+            @include display-medium();
+            @media(max-width: 904px) {
+                @include display-small();
+            }
+            @media(max-width: 632px) {
+                @include title-large-custom();
+            }
+            color: var(--on-inverse-surface);
         }
     }
 }
