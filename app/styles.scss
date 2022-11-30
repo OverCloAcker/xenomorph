@@ -20,6 +20,9 @@
     --surface-variant-light: #E7E0EC;
     --on-surface-variant-light: #49454F;
 
+    --secondary-container-light: #E8DEF8;
+    --on-secondary-container-light: #1D192B;
+
     --primary-dark: #D0BCFF;
     --on-primary-dark: #381E72;
 
@@ -33,6 +36,9 @@
     --surface-variant-dark: #49454F;
     --on-surface-variant-dark: #CAC4D0;
 
+    --secondary-container-dark: #4A4458;
+    --on-secondary-container-dark: #E8DEF8;
+
     @media(prefers-color-scheme: light) {
         --primary: var(--primary-light);
         --on-primary: var(--on-primary-light);
@@ -42,6 +48,8 @@
         --on-inverse-surface: var(--on-inverse-surface-light);
         --surface-variant: var(--surface-variant-light);
         --on-surface-variant: var(--on-surface-variant-light);
+        --secondary-container: var(--secondary-container-light);
+        --on-secondary-container: var(--on-secondary-container-light);
     }
     @media(prefers-color-scheme: dark) {
         --primary: var(--primary-dark);
@@ -52,6 +60,8 @@
         --on-inverse-surface: var(--on-inverse-surface-dark);
         --surface-variant: var(--surface-variant-dark);
         --on-surface-variant: var(--on-surface-variant-dark);
+        --secondary-container: var(--secondary-container-dark);
+        --on-secondary-container: var(--on-secondary-container-dark);
     }
 }
 
@@ -528,7 +538,7 @@ body {
         flex-grow: 1;
         display: grid;
         grid-template-columns: repeat(var(--body-columns), 1fr);
-        @media(max-width: 632px) {
+        @media(max-width: 904px) {
             display: flex;
             flex-direction: column;
         }
@@ -551,6 +561,9 @@ body {
             background-position-y: center;
             background-size: cover;
             border-radius: 16px;
+            @media(max-width: 904px) {
+                height: 300px;
+            }
             @media(max-width: 632px) {
                 height: 200px;
             }
@@ -599,7 +612,7 @@ body {
         flex-grow: 1;
         display: grid;
         grid-template-columns: repeat(var(--body-columns), 1fr);
-        @media(max-width: 632px) {
+        @media(max-width: 904px) {
             display: flex;
             flex-direction: column;
         }
@@ -622,6 +635,9 @@ body {
             background-position-y: center;
             background-size: cover;
             border-radius: 16px;
+            @media(max-width: 904px) {
+                height: 300px;
+            }
             @media(max-width: 632px) {
                 height: 200px;
             }
@@ -720,7 +736,7 @@ body {
         flex-grow: 1;
         display: grid;
         grid-template-columns: repeat(var(--body-columns), 1fr);
-        @media(max-width: 632px) {
+        @media(max-width: 904px) {
             display: flex;
             flex-direction: column;
         }
@@ -744,6 +760,9 @@ body {
             background-position-x: center;
             background-size: cover;
             border-radius: 16px;
+            @media(max-width: 904px) {
+                height: 300px;
+            }
             @media(max-width: 632px) {
                 height: 200px;
             }
@@ -792,7 +811,7 @@ body {
         flex-grow: 1;
         display: grid;
         grid-template-columns: repeat(var(--body-columns), 1fr);
-        @media(max-width: 632px) {
+        @media(max-width: 904px) {
             display: flex;
             flex-direction: column;
         }
@@ -816,6 +835,9 @@ body {
             background-position-x: center;
             background-size: cover;
             border-radius: 16px;
+            @media(max-width: 904px) {
+                height: 300px;
+            }
             @media(max-width: 632px) {
                 height: 200px;
             }
@@ -864,7 +886,7 @@ body {
         flex-grow: 1;
         display: grid;
         grid-template-columns: repeat(var(--body-columns), 1fr);
-        @media(max-width: 632px) {
+        @media(max-width: 904px) {
             display: flex;
             flex-direction: column;
         }
@@ -888,6 +910,9 @@ body {
             background-position-x: center;
             background-size: cover;
             border-radius: 16px;
+            @media(max-width: 904px) {
+                height: 300px;
+            }
             @media(max-width: 632px) {
                 height: 200px;
             }
@@ -972,6 +997,91 @@ body {
             }
             @media(max-width: 632px) {
                 @include body-small();
+            }
+        }
+    }
+}
+
+.applyment-section{
+    display: flex;
+    background-color: var(--secondary-container);
+    .applyment-section-content {
+        margin-inline: var(--body-margins);
+        flex-basis: var(--body-basis);
+        flex-grow: 1;
+        @media(max-width: 1240px) {
+            margin: auto;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        @media(max-width: 904px) {
+            margin-inline: 32px;
+        }
+        @media(max-width: 664px) {
+            margin-inline: 16px;
+        }
+        padding-block: var(--common-padding-block);
+        @media(max-width: 904px) {
+            padding-block: 50px;
+        }
+        @media(max-width: 632px) {
+            padding-block: 25px;
+        }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        @media(max-width: 904px) {
+            gap: 25px;
+        }
+        @media(max-width: 632px) {
+            gap: 12px;
+        }
+        @media(max-width: 904px) {
+            display: flex;
+            flex-direction: column;
+        }
+        .image{
+            margin-right: 90px;
+            @media(max-width: 1440px) {
+                margin-right: 70px;
+            }
+            @media(max-width: 1372px) {
+                margin-right: 60px;
+            }
+            @media(max-width: 1372px) {
+                margin-right: 0px;
+            }
+            background-image: url(assets/krakozyabr.webp);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+            border-radius: 16px;
+            @media(max-width: 904px) {
+                height: 300px;
+            }
+            @media(max-width: 632px) {
+                height: 200px;
+            }
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            h5 {
+                margin: 0;
+                color: var(--primary);
+                @include headline-medium();
+                @media(max-width: 904px) {
+                    @include headline-small();
+                }
+            }
+            p {
+                margin: 0;
+                color: var(--on-secondary-container);
+                @include body-large();
+                @media(max-width: 904px) {
+                    @include body-medium();
+                }
             }
         }
     }
