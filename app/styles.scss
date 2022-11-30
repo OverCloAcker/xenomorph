@@ -1129,6 +1129,9 @@ body {
         @media(max-width: 904px) {
             gap: 8px;
         }
+        @media(max-width: 632px) {
+            gap: 4px;
+        }
         place-items: center;
         h3 {
             margin: 0;
@@ -1158,6 +1161,62 @@ body {
             }
             @media(max-width: 632px) {
                 @include display-small();
+            }
+        }
+    }
+}
+
+.button-section {
+    background-color: var(--inverse-surface);
+    display: flex;
+    .button-section-content {
+        margin-inline: var(--body-margins);
+        flex-basis: var(--body-basis);
+        flex-grow: 1;
+        @media(max-width: 1240px) {
+            margin: auto;
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        @media(max-width: 904px) {
+            margin-inline: 32px;
+        }
+        @media(max-width: 664px) {
+            margin-inline: 16px;
+        }
+        display: grid;
+        grid-template-columns: repeat(var(--body-columns), 1fr);
+        gap: var(--body-gutters);
+        @media(max-width: 632px) {
+            display: flex;
+            place-content: center;
+        }
+        padding-block: 50px;
+        @media(max-width: 904px) {
+            padding-block: 25px;
+        }
+        @media(max-width: 632px) {
+            padding-block: 12px;
+        }
+        .button {
+            padding: 0;
+            margin: 0;
+            grid-column-start: 4;
+            grid-column-end: 10;
+            @media(max-width: 1500px) {
+                grid-column-start: 3;
+                grid-column-end: 11;
+            }
+            @media(max-width: 632px) {
+                grid-column-start: 4;
+                grid-column-end: 10;
+            }
+            @include filled-button-large();
+            @media(max-width: 904px) {
+                @include filled-button-medium();
+            }
+            @media(max-width: 632px) {
+                @include filled-button-small();
             }
         }
     }
